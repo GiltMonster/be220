@@ -7,13 +7,17 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 
 
+import { HeaderComponent } from "../components/header/header.component";
+import { ProgramasComponent } from "../components/programas/programas.component";
+import { PerfilComponent } from "../components/perfil/perfil.component";
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, HeaderComponent, ProgramasComponent, PerfilComponent]
 })
 export class HomePageModule {}
