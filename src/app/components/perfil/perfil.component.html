@@ -1,10 +1,10 @@
-<div class="perfilContent">
+<header>
   <div class="infoPerfil" *ngIf="!loading">
     <ion-avatar>
-      <img alt="uma pessoa aleatoria" [src]="data?.picture.thumbnail" />
+      <img alt="uma pessoa aleatoria" [src]="data?.picture?.thumbnail" />
     </ion-avatar>
     <ion-label>
-      <h1>{{data?.name.first}} {{data?.name.last}}</h1>
+      <h1>{{data?.name?.first}} {{data?.name?.last}}</h1>
       <p>Nivel Roxo</p>
     </ion-label>
   </div>
@@ -33,4 +33,4 @@
       <ion-label>OBJETIVOS E CONQUISTAS</ion-label>
     </ion-button>
   </div>
-</div>
+</header>

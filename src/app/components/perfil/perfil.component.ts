@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from "../../services/user.service";
-
+import { User } from "../../modules/User";
+import { Results } from '../../modules/results';
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.scss'],
 })
-export class PerfilComponent  implements OnInit {
+export class PerfilComponent implements OnInit {
 
-  // MAPEAR OS DADOS DA API DEPOIS, POR ENQUANTO FICA ANY
+  data?: User;
   loading: boolean = true;
-  data: any;
 
   constructor(private userService: UserService) { }
 
@@ -18,12 +18,10 @@ export class PerfilComponent  implements OnInit {
     this.loadUser();
   }
 
-  loadUser(){
-    this.userService.getUser().subscribe((res) => {
-      this.data = res?.results[0];
+  loadUser() {
+    this.userService.getUser().subscribe((res: Results) => {
+      this.data = res.results[0];
       this.loading = false;
-      console.log("data:", this.data);
-
     });
   };
 
