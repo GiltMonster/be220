@@ -1,3 +1,36 @@
 <div class="perfilContent">
-  
+  <div class="infoPerfil" *ngIf="!loading">
+    <ion-avatar>
+      <img alt="uma pessoa aleatoria" [src]="data?.picture.thumbnail" />
+    </ion-avatar>
+    <ion-label>
+      <h1>{{data?.name.first}} {{data?.name.last}}</h1>
+      <p>Nivel Roxo</p>
+    </ion-label>
+  </div>
+
+  <div class="load" *ngIf="loading">
+    <ion-avatar>
+      <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+    </ion-avatar>
+    <ion-label>
+      <h1>
+         <ion-skeleton-text [animated]="true" style="width: 150px;"></ion-skeleton-text>
+      </h1>
+      <p>
+         <ion-skeleton-text [animated]="true" style="width: 40%;"></ion-skeleton-text>
+      </p>
+    </ion-label>
+  </div>
+
+  <div class="buttonsPerfil">
+    <ion-button fill="clear">
+      <ion-icon name="body"></ion-icon>
+      <ion-label>MEU CORPO</ion-label>
+    </ion-button>
+    <ion-button fill="clear">
+      <ion-icon name="trophy"></ion-icon>
+      <ion-label>OBJETIVOS E CONQUISTAS</ion-label>
+    </ion-button>
+  </div>
 </div>
