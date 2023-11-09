@@ -10,8 +10,8 @@
   <div scrollX="true" class="horizontal-list">
     <div *ngFor="let data of myData; let i = index">
       <img [src]="data.img" />
-      <p *ngIf="i === 0">Continuar treinando</p>
-      <h1>{{data.exercicio}}</h1>
+      <p *ngIf="i === 0">CONTINUAR TREINANDO</p>
+      <h1>{{upFont(data.exercicio)}}</h1>
     </div>
   </div>
 

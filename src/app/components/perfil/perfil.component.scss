@@ -7,6 +7,8 @@ header{
   max-height: 25%;
   background-color: #202020;
   border-radius: 0 0 30px 30px;
+  position: absolute;
+  z-index: 2;
 }
 
 .load{
@@ -31,7 +33,7 @@ header{
 
   ion-avatar{
     margin: 0 10px ;
-    width: 100px;
+    width: 90px;
     height: auto;
   }
 

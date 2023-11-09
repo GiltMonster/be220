@@ -13,4 +13,8 @@ export class PersonalComponent  implements OnInit {
 
   ngOnInit() {}
 
+  upFont(str: string){
+    return str.toUpperCase();
+  }
+
 }

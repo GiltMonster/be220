@@ -15,4 +15,8 @@ export class ProgramasComponent  implements OnInit {
 
   ngOnInit() {}
 
+  upFont(str: string){
+    return str.toUpperCase();
+  }
+
 }

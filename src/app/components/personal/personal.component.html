@@ -4,19 +4,20 @@
     <h1>
       PERSONAL ONLINE
     </h1>
-    <ion-button fill="clean">
+    <ion-button fill="clear">
       <ion-icon name="add-circle-outline"></ion-icon>
     </ion-button>
   </ion-label>
 
   <div scrollX="true" class="horizontal-list">
     <div *ngFor="let data of myData; let i = index">
+      <div class="fundo" *ngIf="i === 0"></div>
       <img [src]="data.img" />
       <ion-label *ngIf="i === 0">
         <ion-icon name="add-circle-outline"></ion-icon>
-        <p>Novo <br> treino</p>
+        <p>NOVO <br> TREINO</p>
       </ion-label>
-      <h1 *ngIf="i !== 0">{{data.exercicio}}</h1>
+      <h1 *ngIf="i !== 0">{{upFont(data.exercicio)}}</h1>
     </div>
   </div>
 
