@@ -1,0 +1,45 @@
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 0px 20px;
+
+  h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 35px;
+  }
+
+  //informa o ionic que é uma lista lateral
+  div[scrollX=true] {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .horizontal-list {
+    div {
+      position: relative;
+      display: inline-block;
+    }
+
+    .conteudo {
+      border: 1px solid #fafafa;
+      border-radius: 25px;
+      width: 300px;
+      height: 200px;
+      margin: 0 10px 0 0;
+    }
+
+    .primario {
+      background-color: #f07d07;
+      border-radius: 25px;
+      width: 120px;
+      height: 70px;
+      position: absolute;
+      top: 65px;
+      left: 30px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(240, 123, 7, 0.2862745098);
+    }
+
+  }
+}

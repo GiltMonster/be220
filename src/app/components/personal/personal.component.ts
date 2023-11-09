@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { fakeData } from "../../../utils/dataMockup";
 
-
 @Component({
-  selector: 'app-programas',
-  templateUrl: './programas.component.html',
-  styleUrls: ['./programas.component.scss'],
+  selector: 'app-personal',
+  templateUrl: './personal.component.html',
+  styleUrls: ['./personal.component.scss'],
 })
-export class ProgramasComponent  implements OnInit {
+export class PersonalComponent  implements OnInit {
 
   public myData = fakeData;
-
   constructor() { }
 
   ngOnInit() {}

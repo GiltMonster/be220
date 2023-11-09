@@ -1,0 +1,23 @@
+<section>
+
+  <ion-label>
+    <h1>
+      PERSONAL ONLINE
+    </h1>
+    <ion-button fill="clean">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-label>
+
+  <div scrollX="true" class="horizontal-list">
+    <div *ngFor="let data of myData; let i = index">
+      <img [src]="data.img" />
+      <ion-label *ngIf="i === 0">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        <p>Novo <br> treino</p>
+      </ion-label>
+      <h1 *ngIf="i !== 0">{{data.exercicio}}</h1>
+    </div>
+  </div>
+
+</section>

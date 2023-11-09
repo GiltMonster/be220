@@ -1,7 +1,7 @@
 <header>
   <div class="infoPerfil" *ngIf="!loading">
     <ion-avatar>
-      <img alt="uma pessoa aleatoria" [src]="data?.picture?.thumbnail" />
+      <img alt="uma pessoa aleatoria" [src]="data?.picture?.large" />
     </ion-avatar>
     <ion-label>
       <h1>{{data?.name?.first}} {{data?.name?.last}}</h1>
